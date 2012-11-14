@@ -137,3 +137,8 @@ SIGNING_SERVER_ACTIVE = True
 METLOG_CONF['logger'] = 'addons-marketplace-altdev'
 METLOG_CONF['plugins']['raven'] = ('metlog_raven.raven_plugin:config_plugin', {'dsn': private_mkt.SENTRY_DSN})
 METLOG = client_from_dict_config(METLOG_CONF)
+
+# Temporarily use the dev version of Persona to use some shiny new
+# features required for B2G.
+BROWSERID_VERIFICATION_URL = 'https://notoriousb2g.personatest.org/verify'
+BROWSERID_JS_URL = 'https://notoriousb2g.personatest.org/include.js'
