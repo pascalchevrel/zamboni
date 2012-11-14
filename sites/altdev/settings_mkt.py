@@ -8,6 +8,12 @@ import private_mkt
 
 SERVER_EMAIL = 'zmarketplacedev@addons.mozilla.org'
 
+MIDDLEWARE_CLASSES += (
+    # This lets you install paid apps on B2G desktop
+    # until we fix gaia detection for B2G desktop.
+    'mkt.site.middleware.AlwaysMobile',
+)
+
 DOMAIN = "marketplace-altdev.allizom.org"
 SITE_URL = 'https://marketplace-altdev.allizom.org'
 SERVICES_URL = SITE_URL
