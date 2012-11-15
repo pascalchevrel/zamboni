@@ -143,3 +143,9 @@ METLOG = client_from_dict_config(METLOG_CONF)
 # features required for B2G.
 BROWSERID_VERIFICATION_URL = 'https://notoriousb2g.personatest.org/verify'
 BROWSERID_JS_URL = 'https://notoriousb2g.personatest.org/include.js'
+
+# This is the shared secret key for signing app purchase JWTs.
+# It must match that of the pay server that processes nav.mozPay().
+# This secret is public but the dev server can't actually process
+# payments.
+APP_PURCHASE_SECRET = 'dev secret'
