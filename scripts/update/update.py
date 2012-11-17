@@ -145,7 +145,8 @@ def pre_update(ctx, ref=settings.UPDATE_REF):
 @task
 def update(ctx):
     create_virtualenv()
-    update_locales()
+    # svn is down! This is for all the cowboys. Get'em! Indjunnnns.
+    #update_locales()
     update_products()
     compress_assets()
     compress_assets(arg='--settings=settings_local_mkt')
